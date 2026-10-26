@@ -8,48 +8,32 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter, Lato (900 Black), Playfair Display, AND Lora -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lato:wght@900&family=Playfair+Display:ital,wght@0,400;1,400&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        /* Light Mode Base */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #ffffff;
-            color: #111111;
-            overflow-x: hidden;
-        }
-
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #111111; overflow-x: hidden; }
         .font-serif { font-family: 'Playfair Display', serif; }
         .font-lato { font-family: 'Lato', sans-serif; font-weight: 900; }
         .font-lora { font-family: 'Lora', serif; font-weight: 400; }
-
         ::selection { background-color: #000000; color: #ffffff; }
         html { scroll-behavior: smooth; }
-
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #ffffff; }
         ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
 
-        .reveal-up {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+        .reveal-up { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal-up.active { opacity: 1; transform: translateY(0); }
 
-        .parallax-container { overflow: hidden; position: relative; }
-        
         .zoom-container { overflow: hidden; background-color: #f3f4f6; }
         .zoom-container img { transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
         .zoom-container:hover img { transform: scale(1.05); }
 
         .bg-grid-pattern {
-            background-image: linear-gradient(to right, #e5e5e5 1px, transparent 1px),
-                              linear-gradient(to bottom, #e5e5e5 1px, transparent 1px);
+            background-image: linear-gradient(to right, #e5e5e5 1px, transparent 1px), linear-gradient(to bottom, #e5e5e5 1px, transparent 1px);
             background-size: 4rem 4rem;
             mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
             -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
@@ -86,12 +70,12 @@
                     </h1>
                 </div>
                 
-                <!-- Abstract Image -->
-                <div class="absolute right-0 bottom-0 w-full md:w-2/3 h-full md:h-[120%] -z-0 opacity-80 translate-y-8 md:translate-y-0">
-                    <img src="https://images.unsplash.com/photo-1599052902341-3b749d63f910?q=80&w=2564&auto=format&fit=crop" 
-                         alt="Chinese Architecture" 
-                         class="w-full h-full object-cover hover:scale-105 transition-all duration-700 ease-in-out object-left"
-                         style="-webkit-mask-image: linear-gradient(to right, transparent 10%, black 60%); mask-image: linear-gradient(to right, transparent 10%, black 60%);">
+                <!-- Hero Right Image with proper containment -->
+                <div class="absolute right-0 bottom-0 w-full md:w-1/2 h-full md:h-[90%] -z-0 opacity-85 flex items-end justify-end pointer-events-none">
+                    <img src="https://raw.githubusercontent.com/ZiWang0531/portfolio/refs/heads/main/Wukong1.jpg" 
+                         alt="Black Myth Wukong Visual" 
+                         class="max-w-full max-h-full object-contain object-right-bottom drop-shadow-xl"
+                         style="-webkit-mask-image: linear-gradient(to right, transparent 5%, black 40%); mask-image: linear-gradient(to right, transparent 5%, black 40%);">
                 </div>
             </div>
 
@@ -115,9 +99,9 @@
 
         <!-- Hero Image -->
         <div class="w-full mb-32 overflow-hidden bg-black flex justify-center">
-            <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/capsule_616x353.jpg" 
+            <img src="https://raw.githubusercontent.com/ZiWang0531/portfolio/refs/heads/main/Wukong1.jpg" 
                  alt="Black Myth Wukong Gameplay" 
-                 class="w-full max-w-5xl h-auto shadow-sm block transition-transform duration-700 ease-in-out hover:scale-105 opacity-90">
+                 class="w-full max-w-5xl h-auto shadow-sm block transition-transform duration-700 ease-in-out hover:scale-105 opacity-90 object-contain">
         </div>
 
         <!-- Section 1: Overview -->
